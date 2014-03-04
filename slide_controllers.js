@@ -154,7 +154,9 @@ app.controller('SlideController', function($scope, $sce) {
         "slides/1/cfg.137.png",
         "slides/1/cfg.138.png",
         "slides/1/cfg.139.png",
-        "slides/1/cfg.140.png"
+        "slides/1/cfg.140.png",
+        "slides/1/cfg.141.png",
+        "slides/1/cfg.142.png"
         ];
 
     $scope.currentSlideNum = 0;
