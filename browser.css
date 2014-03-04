@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+#topLeft {
+    height: 300px;
+    width: 600px;
+}
+
+.ace_editor {
+    margin-left:-15px;
+    width: 600px;
+}
+
+.prevSlide, .nextSlide {
+    height: 300px;
+}
+
+.prevSlide {
+    cursor: url('http://ga-dash.s3.amazonaws.com/production/assets/left-pointer-0f3eec3e7a95e4de64f52601d8d90a62.png'), pointer;
+}
+
+.nextSlide {
+    cursor: url('http://ga-dash.s3.amazonaws.com/production/assets/right-pointer-39e799e12cb1a1fb6a25d54054188bcb.png'), pointer;
+}
+
+.navigation {
+    width: 615px;
+    text-decoration:underline;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.navigation div {
+    text-decoration: none;
+    text-align: center;
+}
+
+#leftPane {
+    box-shadow: 5px 0px 35px rgba(0,0,0,0.6);
+}
