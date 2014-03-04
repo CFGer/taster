@@ -160,10 +160,16 @@ app.controller('SlideController', function($scope, $sce) {
     $scope.currentSlideNum = 0;
 
     $scope.nextSlide = function() {
+        if($scope.currentSlideNum == $scope.slideImages.length-1) {
+            return;
+        }
         $scope.currentSlideNum++;
     }
 
     $scope.prevSlide = function() {
+        if($scope.currentSlideNum == 0) {
+            return;
+        }
         $scope.currentSlideNum--;
     }
 
