@@ -12,7 +12,6 @@ app.directive('slideImage', function() {
 });
 
 app.controller('SlideController', function($scope, $sce, localStorageService) {
-    $scope.data = {htmlString:"", trustedVersion:""}
     $scope.slideImages = [
 'slides/1/cfg.001.jpg',
 'slides/1/cfg.002.jpg',
@@ -236,14 +235,16 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
 'slides/1/cfg.220.jpg',
 'slides/1/cfg.221.jpg'
         ];
+    var html = localStorageService.get('html') || "";
+    $scope.data = {htmlString:html, trustedVersion:html}
 
     var slideNos = localStorageService.get('currentSlideNum') || 0;
     $scope.currentSlideNum = slideNos;
     $scope.$watch('currentSlideNum', function(value){
         localStorageService.add('currentSlideNum', value);
-        //$scope.currentSlideNum = localStorageService.get('localStorageDemo');
     });
-    //localStorageService.add('currentSlide', $scope.currentSlideNum);
+
+
 
 
     $scope.nextSlide = function() {
@@ -273,5 +274,7 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
     $scope.$watch("data.htmlString", function(newValue) {
         //debugger;
         $scope.data.trustedVersion = $sce.trustAsHtml(newValue);
+        localStorageService.add('html', newValue);
+
     }, true);
 });
