@@ -12,6 +12,10 @@
     width: 600px;
 }
 
+#edit {
+    height: 200px;
+}
+
 .prevSlide, .nextSlide {
     height: 300px;
 }

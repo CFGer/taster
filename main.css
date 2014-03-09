@@ -1,240 +1,60 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:700);
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif);      
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
-input[type=checkbox].css-checkbox {
-    display:none;
+html, body, #edit, #bottomLeft {
+    height: 100%;
 }
 
-input[type=checkbox].css-checkbox + label.css-label {
-    padding-left:25px;
-    height:20px; 
-    display:inline-block;
-    line-height:20px;
-    background-repeat:no-repeat;
-    background-position: 0 0;
-    font-size:20px;
-    vertical-align:middle;
-    cursor:pointer;
+img {
+    display: block;
 }
 
-input[type=checkbox].css-checkbox:checked + label.css-label {
-    background-position: 0 -20px;
+#topLeft {
+    height: 300px;
 }
 
-label.css-label {
-    background-image:url(checkbox.png);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.prevSlide, .nextSlide {
+    height: 300px;
+    width: 300px;
+    float: left;
 }
 
-.mini-bio {
-    margin-top: 5px;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 1.2;
-    font-family: 'Noto Serif',serif;
-    text-align: left;
-    color: #777;
+.prevSlide {
+    cursor: url('http://ga-dash.s3.amazonaws.com/production/assets/left-pointer-0f3eec3e7a95e4de64f52601d8d90a62.png'), pointer;
 }
 
-.progress-bar {
-    background-color: #C92443;
+.nextSlide {
+    cursor: url('http://ga-dash.s3.amazonaws.com/production/assets/right-pointer-39e799e12cb1a1fb6a25d54054188bcb.png'), pointer;
 }
 
-h1 {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 57.20000076293945px;
-    margin: 20px 0 10px 0;
+.navigation {
+    width: 600px;
+    text-decoration:underline;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    height: 20px
 }
 
-h2 {
-    font-weight: 700;
-    font-size: 46px;
+
+#prev, #curr, #next {
+    float: left;
+    width: 200px;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
 }
 
-p.first-child {
-    font-style: italic;
+#leftPane {
+    height: 100%;
+    width: 600px;
+    box-shadow: 5px 0px 35px rgba(0,0,0,0.6);
+    float: left;
 }
 
-p {
-    font-family: 'Noto Serif', serif;
-    font-size: 22px;
-    line-height: 31.428571701049805px;
-    margin-bottom: 20px;
-}
 
-#browser {
-    background-color: #eee;
-    border-width: 2px 2px 2px 2px;
-    border-style: solid;
-    border-color: black;
-    width: 100%;
-    border-radius: 5px;
+#rightPane {
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
-
-img.cfg {
-    width: 100%;
-}
-
-img.chrome-header {
-    width: 100%;
-}
-
-.reset-this {
-    animation : none;
-    animation-delay : 0;
-    animation-direction : normal;
-    animation-duration : 0;
-    animation-fill-mode : none;
-    animation-iteration-count : 1;
-    animation-name : none;
-    animation-play-state : running;
-    animation-timing-function : ease;
-    backface-visibility : visible;
-    background : 0;
-    background-attachment : scroll;
-    background-clip : border-box;
-    background-color : transparent;
-    background-image : none;
-    background-origin : padding-box;
-    background-position : 0 0;
-    background-position-x : 0;
-    background-position-y : 0;
-    background-repeat : repeat;
-    background-size : auto auto;
-    border : 0;
-    border-style : none;
-    border-width : medium;
-    border-color : inherit;
-    border-bottom : 0;
-    border-bottom-color : inherit;
-    border-bottom-left-radius : 0;
-    border-bottom-right-radius : 0;
-    border-bottom-style : none;
-    border-bottom-width : medium;
-    border-collapse : separate;
-    border-image : none;
-    border-left : 0;
-    border-left-color : inherit;
-    border-left-style : none;
-    border-left-width : medium;
-    border-radius : 0;
-    border-right : 0;
-    border-right-color : inherit;
-    border-right-style : none;
-    border-right-width : medium;
-    border-spacing : 0;
-    border-top : 0;
-    border-top-color : inherit;
-    border-top-left-radius : 0;
-    border-top-right-radius : 0;
-    border-top-style : none;
-    border-top-width : medium;
-    bottom : auto;
-    box-shadow : none;
-    box-sizing : content-box;
-    caption-side : top;
-    clear : none;
-    clip : auto;
-    color : inherit;
-    columns : auto;
-    column-count : auto;
-    column-fill : balance;
-    column-gap : normal;
-    column-rule : medium none currentColor;
-    column-rule-color : currentColor;
-    column-rule-style : none;
-    column-rule-width : none;
-    column-span : 1;
-    column-width : auto;
-    content : normal;
-    counter-increment : none;
-    counter-reset : none;
-    cursor : auto;
-    direction : ltr;
-    display : inline;
-    empty-cells : show;
-    float : none;
-    font : normal;
-    font-family : inherit;
-    font-size : medium;
-    font-style : normal;
-    font-variant : normal;
-    font-weight : normal;
-    height : auto;
-    hyphens : none;
-    left : auto;
-    letter-spacing : normal;
-    line-height : normal;
-    list-style : none;
-    list-style-image : none;
-    list-style-position : outside;
-    list-style-type : disc;
-    margin : 0;
-    margin-bottom : 0;
-    margin-left : 0;
-    margin-right : 0;
-    margin-top : 0;
-    max-height : none;
-    max-width : none;
-    min-height : 0;
-    min-width : 0;
-    opacity : 1;
-    orphans : 0;
-    outline : 0;
-    outline-color : invert;
-    outline-style : none;
-    outline-width : medium;
-    overflow : visible;
-    overflow-x : visible;
-    overflow-y : visible;
-    padding : 0;
-    padding-bottom : 0;
-    padding-left : 0;
-    padding-right : 0;
-    padding-top : 0;
-    page-break-after : auto;
-    page-break-before : auto;
-    page-break-inside : auto;
-    perspective : none;
-    perspective-origin : 50% 50%;
-    position : static;
-    /* May need to alter quotes for different locales (e.g fr) */
-    quotes : '\201C' '\201D' '\2018' '\2019';
-    right : auto;
-    tab-size : 8;
-    table-layout : auto;
-    text-align : inherit;
-    text-align-last : auto;
-    text-decoration : none;
-    text-decoration-color : inherit;
-    text-decoration-line : none;
-    text-decoration-style : solid;
-    text-indent : 0;
-    text-shadow : none;
-    text-transform : none;
-    top : auto;
-    transform : none;
-    transform-style : flat;
-    transition : none;
-    transition-delay : 0s;
-    transition-duration : 0s;
-    transition-property : none;
-    transition-timing-function : ease;
-    unicode-bidi : normal;
-    vertical-align : baseline;
-    visibility : visible;
-    white-space : normal;
-    widows : 0;
-    width : auto;
-    word-spacing : normal;
-    z-index : auto;
-}
-

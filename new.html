@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="SlideApp">
+    <head>
+        <meta charset="utf-8"> 
+        <title>Taster Session - CodeFirst:Girls</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-sanitize.js"></script>
+
+    </head>
+    <body ng-controller="SlideController">
+        <div id="leftPane">
+            <div id="topLeft" class="col-xs-12" slide-image="{{currentSlide()}}">
+                    <div ng-click="prevSlide()" class="prevSlide col-xs-6">
+                    </div>
+                    <div ng-click="nextSlide()" class="nextSlide col-xs-6">
+                </div>
+            </div>
+            <div style="clear: both" class="navigation">
+                <div id="prev" ng-click="prevSlide()">
+                    <i>Previous Slide</i>
+                </div>
+                <div id="curr">
+                    <i>{{progress()}}</i>
+                </div>
+                <div id="next" ng-click="nextSlide()">
+                    <i>Next Slide</i>
+                </div>
+            </div>
+            <div style="clear: both" id="bottomLeft" class="col-xs-12">
+                <div id="edit" ui-ace="{
+                    useWrapMode: false,
+                    mode: 'html',
+                    theme: 'twilight',
+                    onLoad: aceLoaded, 
+                    onChange: aceChanged
+                }"
+                ng-model="data.htmlString"></div>
+            </div>
+        </div>
+        <div id="rightPane">
+            <div id="browser" ng-bind-html="data.trustedVersion"></div>
+        </div>
+        <script type="text/javascript" src="slide_controllers.js"></script>
+    </body>
+</html>
