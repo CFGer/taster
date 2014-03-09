@@ -1,4 +1,4 @@
-var app = angular.module('SlideApp', ['ui.ace']);
+var app = angular.module('SlideApp', ['ui.ace', 'LocalStorageModule']);
 
 app.directive('slideImage', function() {
     return function(scope, element, attrs) {
@@ -11,9 +11,8 @@ app.directive('slideImage', function() {
     }
 });
 
-app.controller('SlideController', function($scope, $sce) {
+app.controller('SlideController', function($scope, $sce, localStorageService) {
     $scope.data = {htmlString:"", trustedVersion:""}
-
     $scope.slideImages = [
 'slides/1/cfg.001.jpg',
 'slides/1/cfg.002.jpg',
@@ -238,7 +237,14 @@ app.controller('SlideController', function($scope, $sce) {
 'slides/1/cfg.221.jpg'
         ];
 
-    $scope.currentSlideNum = 0;
+    var slideNos = localStorageService.get('currentSlideNum') || 0;
+    $scope.currentSlideNum = slideNos;
+    $scope.$watch('currentSlideNum', function(value){
+        localStorageService.add('currentSlideNum', value);
+        //$scope.currentSlideNum = localStorageService.get('localStorageDemo');
+    });
+    //localStorageService.add('currentSlide', $scope.currentSlideNum);
+
 
     $scope.nextSlide = function() {
         if($scope.currentSlideNum == $scope.slideImages.length-1) {
