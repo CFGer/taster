@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="SlideApp">
+    <head>
+        <meta charset="utf-8"> 
+        <title>Taster Session - CodeFirst:Girls</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="browser.css">
+        <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-sanitize.js"></script>
+
+    </head>
+    <body ng-controller="SlideController">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-5">
+                    <div id="leftPane" class="row">
+                        <div id="topLeft" class="col-xs-12" slide-image="{{currentSlide()}}">
+                            <div class="row">
+                                <div ng-click="prevSlide()" class="prevSlide col-xs-6">
+                                </div>
+                                <div ng-click="nextSlide()" class="nextSlide col-xs-6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation row">
+                            <div ng-click="prevSlide()" class="col-xs-3">
+                                <i>Previous Slide</i>
+                            </div>
+                            <div class="col-xs-6">
+                                <i>{{progress()}}</i>
+                            </div>
+                            <div ng-click="nextSlide()" class="col-xs-3 pull-right">
+                                <i>Next Slide</i>
+                            </div>
+                        </div>
+                        <div id="bottomLeft" class="col-xs-12">
+                            <div ui-ace="{
+                                useWrapMode: false,
+                                mode: 'html',
+                                theme: 'twilight',
+                                onLoad: aceLoaded, 
+                                onChange: aceChanged
+                            }"
+                            ng-model="data.htmlString"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-7">
+                    <div class="reset-this" id="browser" ng-bind-html="data.trustedVersion"></div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.ace_editor').css('height', $(window).height()-300 + 'px')
+            });
+        </script>
+        <script type="text/javascript" src="slide_controllers.js"></script>
+    </body>
+</html>
