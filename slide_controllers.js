@@ -248,7 +248,6 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
     }
 
     $scope.$watch("data.htmlString", function(newValue) {
-        //debugger;
         $scope.data.trustedVersion = $sce.trustAsHtml(newValue);
         localStorageService.add('html', newValue);
 
