@@ -242,7 +242,7 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
     }
 
     $scope.progress = function() {
-        var current = $scope.currentSlideNum+1,
+        var current = parseInt($scope.currentSlideNum) + 1,
             total = $scope.slideImages.length;
         return current + "/" + total;
     }
