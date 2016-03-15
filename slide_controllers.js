@@ -216,7 +216,8 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
         // 'slides/3/cfg.194.jpg',
         // 'slides/4/cfg.195.jpg',
         // 'slides/4/cfg.196.jpg',
-        // 'slides/4/cfg.197.jpg'
+        // Keep the final CFG-specific slide!
+        'slides/4/cfg.197.jpg'
     ];
 
     var html = localStorageService.get('html') || "";
