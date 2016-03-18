@@ -176,7 +176,7 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
         // ADA slides so added back in
         //
         'slides/5/cfg.154.jpg',
-        'slides/5/cfg.155.jpg'
+        'slides/5/cfg.155.jpg',
         // 'slides/5/cfg.156.jpg',
         // 'slides/5/cfg.157.jpg',
         // 'slides/5/cfg.158.jpg',
