@@ -13,7 +13,7 @@ app.directive('slideImage', function() {
 
 app.controller('SlideController', function($scope, $sce, localStorageService) {
     $scope.slideImages = [
-        'twitter-elle-1.jpg',
+        'slides/4/twitter-elle-1.jpg',
         'slides/3/cfg.002.jpg',
         'slides/3/cfg.003.jpg',
         'slides/3/cfg.004.jpg',
@@ -217,9 +217,9 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
         // 'slides/4/cfg.195.jpg',
         // 'slides/4/cfg.196.jpg',
         // Keep the final CFG-specific slide!
-        'slides/4/cfg.197.jpg'
-        // 'slides/4/twitter-elle-final-1.jpg',
-        // 'slides/4/twitter-elle-final-2.jpg'
+        'slides/4/cfg.197.jpg',
+        'slides/4/twitter-elle-final-1.jpg',
+        'slides/4/twitter-elle-final-2.jpg'
     ];
 
     var html = localStorageService.get('html') || "";
