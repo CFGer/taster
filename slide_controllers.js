@@ -218,8 +218,8 @@ app.controller('SlideController', function($scope, $sce, localStorageService) {
         // 'slides/4/cfg.196.jpg',
         // Keep the final CFG-specific slide!
         'slides/4/cfg.197.jpg'
-        'slides/4/twitter-elle-final-1.jpg',
-        'slides/4/twitter-elle-final-2.jpg'
+        // 'slides/4/twitter-elle-final-1.jpg',
+        // 'slides/4/twitter-elle-final-2.jpg'
     ];
 
     var html = localStorageService.get('html') || "";
